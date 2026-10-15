@@ -1,3 +1,6 @@
 README.txt
 시작하기.command
 .DS_Store
+*.txt
+dist/
+배포.sh
