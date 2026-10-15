@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="6 4 134 124">
+  <style>.w{mix-blend-mode:multiply}</style>
+  <ellipse class="w" cx="50" cy="47" rx="31" ry="37" transform="rotate(-38 50 47)" fill="#b9d300"/>
+  <ellipse class="w" cx="94" cy="71" rx="41" ry="27" transform="rotate(-30 94 71)" fill="#f7b500" opacity=".88"/>
+  <ellipse class="w" cx="32" cy="92" rx="22" ry="15.5" transform="rotate(-20 32 92)" fill="#fcd00a" opacity=".9"/>
+  <ellipse class="w" cx="58" cy="101" rx="17" ry="21" transform="rotate(10 58 101)" fill="#f9c01a" opacity=".85"/>
+  <circle cx="111.5" cy="25" r="10.5" fill="#f08a01"/>
+  <circle cx="88.5" cy="29.5" r="5.5" fill="#feaf0a"/>
+  <circle cx="87" cy="14.5" r="3.4" fill="#c23b0c"/>
+</svg>
