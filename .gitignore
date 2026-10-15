@@ -4,3 +4,4 @@ README.txt
 *.txt
 dist/
 배포.sh
+.wrangler/
