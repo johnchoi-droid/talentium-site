@@ -40,7 +40,7 @@
 html{scroll-behavior:smooth;scroll-padding-top:90px}
 html{-webkit-text-size-adjust:100%}
 body{font-family:"Noto Sans KR",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:15px;color:var(--text);background:#fff;line-height:1.7;word-break:keep-all;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 ul,ol{list-style:none}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 30px}
@@ -85,6 +85,27 @@ ul,ol{list-style:none}
 .quick strong{display:block;margin-top:4px;font-size:17px;font-weight:700;color:var(--head)}
 .quick span{display:block;margin-top:10px;font-size:13px;color:var(--sub)}
 .quick i{font-style:normal;float:right;color:var(--muted)}
+
+/* academy feature */
+.feat{background:var(--bg2);padding:90px 0}
+.feat .fg{display:grid;grid-template-columns:auto 1fr;gap:60px;align-items:center}
+.feat .pimg{display:block;width:340px;background:#fff;padding:10px;box-shadow:0 18px 40px -24px rgba(0,0,0,.35)}
+.feat .now{display:inline-block;font-size:12.5px;font-weight:700;color:#fff;background:var(--orange);padding:3px 10px}
+.feat .org{margin-top:16px;font-size:14px;color:var(--sub)}
+.feat h2{margin-top:6px;font-size:36px;font-weight:700;color:var(--head);letter-spacing:-.02em;line-height:1.3}
+.feat .catch{margin-top:12px;font-size:20px;font-weight:500;color:var(--head);line-height:1.5}
+.feat .fx{display:grid;grid-template-columns:repeat(4,1fr);margin-top:30px;border-top:2px solid var(--head);background:#fff}
+.feat .fx div{padding:18px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.feat .fx div:last-child{border-right:0}
+.feat .fx small{display:block;font-size:12px;color:var(--muted)}
+.feat .fx b{display:block;margin-top:2px;font-size:18px;color:var(--head)}
+.feat .fx span{display:block;font-size:12.5px;color:var(--sub)}
+.feat .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.feat .acts a{display:inline-flex;align-items:center;justify-content:center;height:50px;padding:0 26px;font-size:15px;font-weight:500;border:1px solid var(--head);transition:all .2s}
+.feat .acts a.dk{background:var(--dark);border-color:var(--dark);color:#fff}
+.feat .acts a.dk:hover{background:#000}
+.feat .acts a.ln:hover{background:var(--head);color:#fff}
+.feat .who{margin-top:16px;font-size:14px;color:var(--sub)}
 
 /* section heads */
 section{padding:110px 0}
@@ -244,6 +265,10 @@ footer{border-top:1px solid var(--line)}
   .fb .tel{text-align:left}
 
   .mnav a.tel{color:var(--orange)}
+  .feat .fg{grid-template-columns:260px 1fr;gap:36px}
+  .feat .pimg{width:260px}
+  .feat .fx{grid-template-columns:1fr 1fr}
+  .feat .fx div:nth-child(2){border-right:0}
   .mbar{display:grid;grid-template-columns:1fr 1.25fr;position:fixed;left:0;right:0;bottom:0;z-index:45;background:#fff;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
   .mbar a{display:flex;align-items:center;justify-content:center;gap:7px;height:56px;font-size:15px;font-weight:500;color:var(--head)}
   .mbar a.y{background:var(--yellow)}
@@ -297,6 +322,14 @@ footer{border-top:1px solid var(--line)}
   .hero p{margin-top:16px}
   .hero .more{margin-top:24px;padding:10px 20px}
   .tabs{margin:0 -20px;padding:2px 20px 4px;width:calc(100% + 40px)}
+  .feat{padding:64px 0}
+  .feat .fg{grid-template-columns:1fr;gap:28px}
+  .feat .pimg{width:100%;max-width:280px;margin:0 auto;order:2}
+  .feat h2{font-size:27px}
+  .feat .catch{font-size:17px}
+  .feat .catch br{display:none}
+  .feat .fx b{font-size:16px}
+  .feat .acts a{flex:1;padding:0 12px}
   .boxes{grid-template-columns:1fr;gap:12px;margin-top:36px}
   .row,.row:nth-child(even){grid-template-columns:1fr}
   .row:nth-child(even) .pane{order:0}
@@ -342,15 +375,15 @@ footer{border-top:1px solid var(--line)}
     </nav>
     <a href="#top" class="logo" aria-label="(주)한국인재연구소 홈"><img src="assets/logo.png" alt="(주)한국인재연구소 KOREA INSTITUTE OF TALENT EDUCATION"></a>
     <nav class="r" aria-label="보조 메뉴">
+      <a href="/aiacademy/">AI 아카데미</a>
       <a href="#news">소식</a>
-      <a href="#partners">협력기관</a>
     </nav>
     <a href="#contact" class="ask" aria-label="교육 문의"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5" stroke-linecap="round"/></svg>교육문의</a>
     <button class="burger" id="burger" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 <nav class="mnav" id="mnav" aria-label="모바일 메뉴">
-  <a href="#about">회사소개</a><a href="#business">사업영역</a><a href="#programs">프로그램</a><a href="#news">소식</a><a href="#partners">협력기관</a><a href="#contact">교육문의</a><a href="tel:01055978744" class="tel">전화 010-5597-8744</a>
+  <a href="#about">회사소개</a><a href="#business">사업영역</a><a href="#programs">프로그램</a><a href="/aiacademy/">AI 아카데미</a><a href="#news">소식</a><a href="#partners">협력기관</a><a href="#contact">교육문의</a><a href="tel:01055978744" class="tel">전화 010-5597-8744</a>
 </nav>
 
 <main id="top">
@@ -359,7 +392,7 @@ footer{border-top:1px solid var(--line)}
     <div class="wrap">
       <div>
         <div class="k">적기교육 · 맞춤 인재교육</div>
-        <h1>한 아이의 고유함이<br><b>가장 알맞은 때</b>에 피어나도록</h1>
+        <h1>한 아이의 고유함이 <br><b>가장 알맞은 때</b>에 피어나도록</h1>
         <p>(주)한국인재연구소는 과학적 진단과 맞춤 컨설팅, 교육전문가 양성, 그리고 가정과 함께하는 교육 콘텐츠로 다음 세대가 자신의 길을 발견하고 걸어가도록 돕는 인재교육 전문기업입니다.</p>
         <a class="more" href="#about">자세히 보기 <span aria-hidden="true">›</span></a>
       </div>
@@ -379,6 +412,30 @@ footer{border-top:1px solid var(--line)}
       <a href="#biz-4"><small>가정·문화</small><strong>패밀리온더락 <i>›</i></strong><span>자녀 양육 · 가정 예식</span></a>
     </div>
   </div>
+
+  <!-- 모집 중: AI 아카데미 -->
+  <section class="feat" id="academy">
+    <div class="wrap fg">
+      <a class="pimg" href="/aiacademy/" aria-label="목회자를 위한 AI 아카데미 자세히 보기"><img src="/aiacademy/img/poster-1000.jpg" alt="목회자를 위한 AI 아카데미 안내 포스터" width="1000" height="1415" loading="lazy"></a>
+      <div>
+        <span class="now">모집 중</span>
+        <div class="org">㈜한국인재연구소 주최 · 운영 | 사단법인 티움 협력</div>
+        <h2>목회자를 위한 AI 아카데미</h2>
+        <p class="catch">반복되는 일은 AI에게, <br>목사님은 말씀과 기도에</p>
+        <div class="fx">
+          <div><small>개강</small><b>10월 29일</b><span>목요일 · 4주</span></div>
+          <div><small>시간 · 방식</small><b>오후 2시</b><span>Zoom 온라인</span></div>
+          <div><small>참가비</small><b>20만원</b><span>부가세 포함</span></div>
+          <div><small>준비물</small><b>노트북</b><span>처음이어도 괜찮습니다</span></div>
+        </div>
+        <div class="acts">
+          <a class="dk" href="/aiacademy/">과정 자세히 보기 ›</a>
+          <a class="ln" href="https://forms.gle/6NdC3SSy5LXptCHF9" target="_blank" rel="noopener">신청서 작성하기</a>
+        </div>
+        <p class="who">대상 : 담임목사 · 부교역자 · 사모 · 신학생 &nbsp;|&nbsp; 문의 : 이혜정 연구원 010-9787-4906</p>
+      </div>
+    </div>
+  </section>
 
   <!-- 회사소개 -->
   <section id="about" class="about">
@@ -631,7 +688,7 @@ footer{border-top:1px solid var(--line)}
 <footer>
   <div class="fl">
     <div class="wrap">
-      <a href="#about">회사소개</a><a href="#business">사업영역</a><a href="#contact">교육문의</a>
+      <a href="#about">회사소개</a><a href="#business">사업영역</a><a href="/aiacademy/">AI 아카데미</a><a href="#contact">교육문의</a>
       <a href="http://www.jindanplus.co.kr" target="_blank" rel="noopener">진단플러스</a>
       <a href="http://www.eduexpert.co.kr" target="_blank" rel="noopener">미래교육전문가</a>
       <a href="https://familyontherock.co.kr" target="_blank" rel="noopener">패밀리온더락</a>
