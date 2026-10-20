@@ -26,7 +26,7 @@
   "description": "주보·행정·자료 조사·예화 찾기에 드는 시간을 AI로 줄이고, 성경 말씀을 기준으로 AI를 분별하는 4주 실습 과정",
   "provider": {"@type": "Organization", "name": "주식회사 한국인재연구소", "url": "https://talentium.co.kr/"},
   "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "online", "startDate": "2026-11-03", "endDate": "2026-11-24",
-    "offers": {"@type": "AggregateOffer", "lowPrice": "120000", "highPrice": "200000", "priceCurrency": "KRW"}}
+    "offers": {"@type": "AggregateOffer", "lowPrice": "100000", "highPrice": "200000", "priceCurrency": "KRW"}}
 }
 </script>
 <style>
@@ -98,7 +98,7 @@ ul,ol{list-style:none}
 
 /* pricing */
 .price{padding:56px 0 0}
-.tiers{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:14px}
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .tier{border:1px solid var(--line);padding:26px 28px}
 .tier small{display:block;font-size:13.5px;font-weight:500;color:var(--sub)}
 .tier b{display:block;margin-top:6px;font-size:32px;font-weight:700;color:var(--head);letter-spacing:-.02em;line-height:1.2}
@@ -109,6 +109,8 @@ ul,ol{list-style:none}
 .tier.best b{color:#fff}
 .tier.best p{color:#ddd}
 .tier.best p strong{color:var(--yellow);font-weight:700}
+.tier.sp{background:#fff7dc;border-color:var(--yellow)}
+.tier.sp small{color:#8a6d12}
 .price .pn{margin-top:12px;font-size:13.5px;color:var(--muted)}
 
 /* section heads */
@@ -285,7 +287,7 @@ footer{border-top:1px solid var(--line)}
   .facts div:last-child{border-right:0}
   .why .cols{grid-template-columns:1fr;gap:30px}
   .inst{grid-template-columns:1fr}
-  .tiers{grid-template-columns:1fr 1fr 1fr;gap:10px}
+  .tiers{grid-template-columns:1fr 1fr;gap:10px}
   .tier{padding:20px}
   .tier b{font-size:26px}
   .poster-sec img{width:320px}
@@ -435,6 +437,7 @@ footer{border-top:1px solid var(--line)}
     <div class="wrap">
       <div class="tiers">
         <div class="tier best"><small>사전 등록 사역 지원가</small><b>140,000<span>원</span></b><p>10월 26일까지 입금 시 <strong>6만 원 지원</strong></p></div>
+        <div class="tier sp"><small>선교사 · 개척교회 목회자</small><b>100,000<span>원</span></b><p>사역 지원 추가 할인 · 신청 시 알려 주세요</p></div>
         <div class="tier"><small>동반 등록 (1인당)</small><b>120,000<span>원</span></b><p>동일 교회 2인 이상 등록 시</p></div>
         <div class="tier"><small>정규 참가비</small><b>200,000<span>원</span></b><p>11월 2일(월)까지 · 부가세 포함</p></div>
       </div>
@@ -594,7 +597,7 @@ footer{border-top:1px solid var(--line)}
         <tr><th>신청 마감</th><td>11월 2일(월)</td></tr>
         <tr><th>방식</th><td>Zoom 온라인 실시간<small>접속 링크는 신청자에게 개별 안내드립니다</small></td></tr>
         <tr><th>대상</th><td>담임목사 · 부교역자 · 사모 · 신학생</td></tr>
-        <tr><th>참가비</th><td>사전 등록 사역 지원가 140,000원 <small>10월 26일까지 입금 시 (6만 원 지원)</small>동반 등록 120,000원 (1인당) <small>동일 교회 2인 이상 등록 시</small>정규 참가비 200,000원 <small>11월 2일(월)까지 · 부가세 포함 · 4회 전 과정</small></td></tr>
+        <tr><th>참가비</th><td>사전 등록 사역 지원가 140,000원 <small>10월 26일까지 입금 시 (6만 원 지원)</small>선교사 · 개척교회 목회자 100,000원 <small>사역 지원 추가 할인 · 해당되시면 신청 시 알려 주세요</small>동반 등록 120,000원 (1인당) <small>동일 교회 2인 이상 등록 시</small>정규 참가비 200,000원 <small>11월 2일(월)까지 · 부가세 포함 · 4회 전 과정</small></td></tr>
         <tr><th>준비물</th><td>개인 노트북 (필수)<small>실습 중심 과정이므로 반드시 지참해 주십시오</small></td></tr>
         <tr><th>녹화본</th><td>각 회차 종료 후 24시간 이내 제공<small>수강생 본인 학습용이며, 무단 공유·배포·재게시를 금합니다</small></td></tr>
         <tr><th>강사</th><td>고봉익 대표 · 최주안 목사 (Ed.D.)</td></tr>
@@ -649,6 +652,7 @@ footer{border-top:1px solid var(--line)}
     <div class="wrap">
       <div class="tt"><h2>자주 묻는 질문</h2><em>FAQ</em></div>
       <div class="acc">
+        <details><summary><span>선교사나 개척교회 목회자도 할인이 있나요?</span></summary><div class="a">네. 선교사님과 개척교회 목회자분들께는 사역 지원 차원에서 추가 할인을 드려 100,000원에 수강하실 수 있습니다. 해당되시는 경우 신청 시 알려 주시거나 이혜정 연구원(010-9787-4906)께 문의해 주세요.</div></details>
         <details><summary><span>같은 교회에서 함께 등록하면 할인이 있나요?</span></summary><div class="a">네. 동일 교회에서 2인 이상 등록하시면 1인당 120,000원의 동반 등록가가 적용됩니다. 10월 26일까지 입금하시면 사전 등록 사역 지원가 140,000원이 적용됩니다.</div></details>
         <details><summary><span>컴퓨터를 잘 다루지 못해도 괜찮을까요?</span></summary><div class="a">괜찮습니다. 오히려 그런 분들을 위해 설계한 과정입니다. 계정 설정부터 함께 시작하고, 모든 회차가 따라 하기 중심의 실습으로 진행됩니다.</div></details>
         <details><summary><span>노트북이 꼭 있어야 하나요?</span></summary><div class="a">네, 실습 중심 과정이라 개인 노트북이 필요합니다. 어려우신 경우 신청 시 미리 말씀해 주시면 상의해 드리겠습니다.</div></details>
