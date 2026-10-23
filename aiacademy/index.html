@@ -111,6 +111,15 @@ ul,ol{list-style:none}
 .tier.best p strong{color:var(--yellow);font-weight:700}
 .tier.sp{background:#fff7dc;border-color:var(--yellow)}
 .tier.sp small{color:#8a6d12}
+.tier s{display:block;margin-top:8px;font-size:14px;color:var(--muted)}
+.tier.best s{color:#aaa}
+.tier b u{text-decoration:none;margin-left:8px;font-size:16px;font-weight:700;color:var(--orange);vertical-align:3px}
+.tier.best b u{color:var(--yellow)}
+.list-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;padding:0 0 16px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+.list-price span{font-size:15px;font-weight:500;color:var(--head)}
+.list-price b{font-size:24px;font-weight:700;color:var(--head)}
+.list-price em{font-style:normal;font-size:14px;color:var(--sub)}
+.list-price i{font-style:normal;margin-left:auto;font-size:14px;color:var(--orange);font-weight:500}
 .price .pn{margin-top:12px;font-size:13.5px;color:var(--muted)}
 
 /* section heads */
@@ -340,6 +349,8 @@ footer{border-top:1px solid var(--line)}
   .tiers{grid-template-columns:1fr;gap:10px}
   .tier{padding:20px 20px}
   .tier b{font-size:27px}
+  .list-price i{margin-left:0;width:100%}
+  .list-price b{font-size:21px}
   .price{padding-top:40px}
   .after{grid-template-columns:1fr}
   .after div{border-right:0;padding:20px}
@@ -435,11 +446,12 @@ footer{border-top:1px solid var(--line)}
   <!-- 참가비 -->
   <div class="price" id="price">
     <div class="wrap">
+      <div class="list-price"><span>참가비 정가</span><b>400,000원</b><em>4회 전 과정 · 부가세 포함</em><i>아래 할인가로 등록하실 수 있습니다</i></div>
       <div class="tiers">
-        <div class="tier best"><small>사전 등록 사역 지원가</small><b>140,000<span>원</span></b><p>10월 26일까지 입금 시 <strong>6만 원 지원</strong></p></div>
-        <div class="tier sp"><small>선교사 · 개척교회 목회자</small><b>100,000<span>원</span></b><p>사역 지원 추가 할인 · 신청 시 알려 주세요</p></div>
-        <div class="tier"><small>동반 등록 (1인당)</small><b>120,000<span>원</span></b><p>동일 교회 2인 이상 등록 시</p></div>
-        <div class="tier"><small>정규 참가비</small><b>200,000<span>원</span></b><p>11월 2일(월)까지 · 부가세 포함</p></div>
+        <div class="tier best"><small>사전 등록 사역 지원가</small><s>400,000원</s><b>140,000<span>원</span><u>65%</u></b><p>10월 26일까지 입금 시 <strong>6만 원 추가 지원</strong></p></div>
+        <div class="tier sp"><small>선교사 · 개척교회 목회자</small><s>400,000원</s><b>100,000<span>원</span><u>75%</u></b><p>사역 지원 추가 할인 · 신청 시 알려 주세요</p></div>
+        <div class="tier"><small>동반 등록 (1인당)</small><s>400,000원</s><b>120,000<span>원</span><u>70%</u></b><p>동일 교회 2인 이상 등록 시</p></div>
+        <div class="tier"><small>일반 등록 할인가</small><s>400,000원</s><b>200,000<span>원</span><u>50%</u></b><p>11월 2일(월)까지 · 부가세 포함</p></div>
       </div>
       <p class="pn">※ 4회 전 과정 · 영수증 · 수료증 발급 가능</p>
     </div>
@@ -597,7 +609,7 @@ footer{border-top:1px solid var(--line)}
         <tr><th>신청 마감</th><td>11월 2일(월)</td></tr>
         <tr><th>방식</th><td>Zoom 온라인 실시간<small>접속 링크는 신청자에게 개별 안내드립니다</small></td></tr>
         <tr><th>대상</th><td>담임목사 · 부교역자 · 사모 · 신학생</td></tr>
-        <tr><th>참가비</th><td>사전 등록 사역 지원가 140,000원 <small>10월 26일까지 입금 시 (6만 원 지원)</small>선교사 · 개척교회 목회자 100,000원 <small>사역 지원 추가 할인 · 해당되시면 신청 시 알려 주세요</small>동반 등록 120,000원 (1인당) <small>동일 교회 2인 이상 등록 시</small>정규 참가비 200,000원 <small>11월 2일(월)까지 · 부가세 포함 · 4회 전 과정</small></td></tr>
+        <tr><th>참가비</th><td>정가 400,000원 (부가세 포함) <small>아래 할인가로 등록하실 수 있습니다</small>사전 등록 사역 지원가 140,000원 <small>10월 26일까지 입금 시 (6만 원 추가 지원)</small>선교사 · 개척교회 목회자 100,000원 <small>사역 지원 추가 할인 · 해당되시면 신청 시 알려 주세요</small>동반 등록 120,000원 (1인당) <small>동일 교회 2인 이상 등록 시</small>일반 등록 할인가 200,000원 <small>11월 2일(월)까지 · 부가세 포함 · 4회 전 과정</small></td></tr>
         <tr><th>준비물</th><td>개인 노트북 (필수)<small>실습 중심 과정이므로 반드시 지참해 주십시오</small></td></tr>
         <tr><th>녹화본</th><td>각 회차 종료 후 24시간 이내 제공<small>수강생 본인 학습용이며, 무단 공유·배포·재게시를 금합니다</small></td></tr>
         <tr><th>강사</th><td>고봉익 대표 · 최주안 목사 (Ed.D.)</td></tr>
@@ -652,7 +664,7 @@ footer{border-top:1px solid var(--line)}
     <div class="wrap">
       <div class="tt"><h2>자주 묻는 질문</h2><em>FAQ</em></div>
       <div class="acc">
-        <details><summary><span>선교사나 개척교회 목회자도 할인이 있나요?</span></summary><div class="a">네. 선교사님과 개척교회 목회자분들께는 사역 지원 차원에서 추가 할인을 드려 100,000원에 수강하실 수 있습니다. 해당되시는 경우 신청 시 알려 주시거나 이혜정 연구원(010-9787-4906)께 문의해 주세요.</div></details>
+        <details><summary><span>선교사나 개척교회 목회자도 할인이 있나요?</span></summary><div class="a">네. 선교사님과 개척교회 목회자분들께는 사역 지원 차원에서 추가 할인을 드려 정가 400,000원 과정을 100,000원에 수강하실 수 있습니다. 해당되시는 경우 신청 시 알려 주시거나 이혜정 연구원(010-9787-4906)께 문의해 주세요.</div></details>
         <details><summary><span>같은 교회에서 함께 등록하면 할인이 있나요?</span></summary><div class="a">네. 동일 교회에서 2인 이상 등록하시면 1인당 120,000원의 동반 등록가가 적용됩니다. 10월 26일까지 입금하시면 사전 등록 사역 지원가 140,000원이 적용됩니다.</div></details>
         <details><summary><span>컴퓨터를 잘 다루지 못해도 괜찮을까요?</span></summary><div class="a">괜찮습니다. 오히려 그런 분들을 위해 설계한 과정입니다. 계정 설정부터 함께 시작하고, 모든 회차가 따라 하기 중심의 실습으로 진행됩니다.</div></details>
         <details><summary><span>노트북이 꼭 있어야 하나요?</span></summary><div class="a">네, 실습 중심 과정이라 개인 노트북이 필요합니다. 어려우신 경우 신청 시 미리 말씀해 주시면 상의해 드리겠습니다.</div></details>
@@ -668,7 +680,7 @@ footer{border-top:1px solid var(--line)}
     <div class="wrap">
       <div class="tt"><h2>안내 포스터</h2><em>Poster</em></div>
       <div class="pg">
-        <a href="img/poster.jpg" target="_blank" rel="noopener"><img src="img/poster-1000.jpg" alt="목회자를 위한 AI 아카데미 안내 포스터 — 11월 3일 개강, 매주 화요일 오전 10시 Zoom, 신청 마감 11월 2일, 사전 등록 14만원·동반 12만원·정규 20만원, 4회 커리큘럼, 강사 고봉익·최주안, 문의 이혜정 연구원 010-9787-4906" loading="lazy" width="1000" height="1415"></a>
+        <a href="img/poster.jpg" target="_blank" rel="noopener"><img src="img/poster-1000.jpg" alt="목회자를 위한 AI 아카데미 안내 포스터 — 11월 3일 개강, 매주 화요일 오전 10시 Zoom, 신청 마감 11월 2일, 정가 40만원 → 사전 등록 14만원·동반 12만원·일반 20만원, 4회 커리큘럼, 강사 고봉익·최주안, 문의 이혜정 연구원 010-9787-4906" loading="lazy" width="1000" height="1415"></a>
         <div class="pd">
           <p>교회 단톡방이나 동역자분들께 포스터를 함께 나눠 주세요. <br>포스터를 누르면 원본 크기로 열립니다.</p>
           <div class="cta">
