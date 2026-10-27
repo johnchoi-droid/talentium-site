@@ -72,7 +72,9 @@ ul,ol{list-style:none}
 .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center;padding-top:70px;padding-bottom:70px}
 .hero .org{font-size:14px;font-weight:500;color:#6d5a1c}
 .hero .org span{margin:0 8px;color:#b39a45}
+.hero .gen{margin-top:20px;font-size:14px;font-weight:700;letter-spacing:.2em;color:#8a6d12}
 .hero .k{margin-top:26px;font-size:18px;font-weight:500;color:var(--head)}
+.hero .gen + .k{margin-top:6px}
 .hero h1{margin-top:4px;font-size:46px;line-height:1.25;font-weight:700;color:var(--head);letter-spacing:-.03em}
 .hero h2{margin-top:22px;font-size:24px;line-height:1.5;font-weight:500;color:var(--head);letter-spacing:-.01em}
 .hero p{margin-top:16px;font-size:16.5px;line-height:1.8;font-weight:300;color:#3b3526}
@@ -248,6 +250,29 @@ section{padding:100px 0}
 .refund .sub div{padding:3px 0}
 .refund .contact{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:14.5px;color:var(--head)}
 
+/* card news */
+.cards-sec{background:var(--bg2)}
+.cn{position:relative;margin-top:34px}
+.cn-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:4px}
+.cn-track::-webkit-scrollbar{display:none}
+.cn-track a{flex:0 0 calc((100% - 32px)/3);scroll-snap-align:start;background:#fff;border:1px solid var(--line);display:block}
+.cn-track img{width:100%}
+.cn-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:46px;height:46px;border:1px solid var(--line2);background:#fff;font-size:24px;line-height:1;color:var(--head);cursor:pointer;transition:background .2s}
+.cn-btn:hover{background:var(--head);color:#fff}
+.cn-btn.prev{left:-23px}
+.cn-btn.next{right:-23px}
+.cn-btn[disabled]{opacity:.35;cursor:default;background:#fff;color:var(--head)}
+.cn-foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:22px}
+.cn-count{font-size:14px;color:var(--sub)}
+.cn-foot .cta{margin-top:0}
+/* fit */
+.fitlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:36px}
+.fitlist li{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);padding:20px 22px;font-size:16px;color:var(--head)}
+.fitlist li::before{content:"";flex:none;width:16px;height:9px;margin-top:6px;border-left:2px solid var(--green-d);border-bottom:2px solid var(--green-d);transform:rotate(-45deg)}
+.fitend{margin-top:28px;font-size:20px;font-weight:700;color:var(--green-d)}
+.hands{margin-top:22px;font-size:15.5px;color:var(--sub)}
+.hands b{color:var(--head);font-weight:500}
+
 /* poster + verse */
 .poster-sec .pg{display:grid;grid-template-columns:auto 1fr;gap:50px;align-items:start;margin-top:40px}
 .poster-sec img{width:440px;border:1px solid var(--line)}
@@ -302,6 +327,9 @@ footer{border-top:1px solid var(--line)}
   .tier{padding:20px}
   .tier b{font-size:26px}
   .poster-sec img{width:320px}
+  .cn-track a{flex-basis:calc((100% - 16px)/2)}
+  .cn-btn.prev{left:-10px}
+  .cn-btn.next{right:-10px}
   .fb .wrap{grid-template-columns:1fr;gap:18px}
   .fb .tel{text-align:left}
   .mbar{display:grid;grid-template-columns:1fr 1.25fr;position:fixed;left:0;right:0;bottom:0;z-index:45;background:#fff;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
@@ -374,6 +402,13 @@ footer{border-top:1px solid var(--line)}
   .acc summary{font-size:15px;padding:18px 4px}
   .acc .a{padding:0 4px 20px 22px;font-size:14.5px}
   .poster-sec .pg{grid-template-columns:1fr;gap:24px}
+  .cn-track{gap:10px;margin:0 -20px;padding:0 20px 4px;scroll-padding:0 20px}
+  .cn-track a{flex-basis:84%}
+  .cn-btn{display:none}
+  .cn-foot .cta{width:100%}
+  .fitlist{grid-template-columns:1fr;gap:8px;margin-top:26px}
+  .fitlist li{padding:16px 16px;font-size:15px}
+  .fitend{font-size:17px}
   .poster-sec img{width:100%}
   .verse{padding:56px 0}
   .verse blockquote{font-size:17px}
@@ -407,7 +442,7 @@ footer{border-top:1px solid var(--line)}
   </div>
 </header>
 <nav class="mnav" id="mnav" aria-label="모바일 메뉴">
-  <a href="/">한국인재연구소 홈</a><a href="#curriculum">커리큘럼</a><a href="#info">참가 안내</a><a href="#apply">신청 방법</a><a href="#faq">자주 묻는 질문</a><a href="tel:01097874906" class="tel">문의 010-9787-4906</a>
+  <a href="/">한국인재연구소 홈</a><a href="#cards">카드뉴스</a><a href="#curriculum">커리큘럼</a><a href="#info">참가 안내</a><a href="#apply">신청 방법</a><a href="#faq">자주 묻는 질문</a><a href="tel:01097874906" class="tel">문의 010-9787-4906</a>
 </nav>
 
 <div class="loc"><div class="wrap"><a href="/">홈</a> › <a href="/#programs">프로그램</a> › <b>목회자를 위한 AI 아카데미</b></div></div>
@@ -418,6 +453,7 @@ footer{border-top:1px solid var(--line)}
     <div class="wrap">
       <div>
         <div class="org">㈜한국인재연구소 주최 · 운영<span>|</span>사단법인 티움 협력</div>
+        <div class="gen">2026년 제1기</div>
         <div class="k">목회자를 위한</div>
         <h1>AI 아카데미</h1>
         <h2>반복되는 일은 AI에게, <br>목사님은 말씀과 기도에</h2>
@@ -428,9 +464,9 @@ footer{border-top:1px solid var(--line)}
         </div>
         <div class="ok">AI가 처음이어도 괜찮습니다 — 계정 설정부터 함께 시작합니다.</div>
       </div>
-      <a class="poster-thumb" href="#poster" aria-label="안내 포스터 보기">
-        <img src="img/poster-1000.jpg" alt="목회자를 위한 AI 아카데미 안내 포스터" width="1000" height="1415">
-        <small>안내 포스터 크게 보기</small>
+      <a class="poster-thumb" href="#cards" aria-label="카드뉴스 보기">
+        <img src="cards/card-01.jpg" alt="2026년 제1기 목회자를 위한 AI 아카데미 — 11월 3일(화) 개강, 매주 화 오전 10시, 사전 등록 14만 원" width="1080" height="1080">
+        <small>카드뉴스로 한눈에 보기 ›</small>
       </a>
     </div>
   </div>
@@ -450,14 +486,44 @@ footer{border-top:1px solid var(--line)}
     <div class="wrap">
       <div class="list-price"><span>참가비 정가</span><b>400,000원</b><em>4회 전 과정 · 부가세 포함</em><i>사전 등록 · 동반 등록 시 할인됩니다</i></div>
       <div class="tiers">
-        <div class="tier best"><small>사전 등록 사역 지원가</small><s>400,000원</s><b>140,000<span>원</span><u>65%</u></b><p>10월 26일까지 입금 시 <strong>26만 원 할인</strong></p></div>
+        <div class="tier best"><small>사전 등록 사역 지원가</small><s>400,000원</s><b>140,000<span>원</span><u>65%</u></b><p>10월 27일까지 입금 시 <strong>26만 원 지원</strong></p></div>
         <div class="tier sp"><small>선교사 · 개척교회 목회자</small><b class="ask">별도 문의</b><p>사역 지원 할인이 있습니다<br>이혜정 연구원 <a href="tel:01097874906">010-9787-4906</a></p></div>
         <div class="tier"><small>동반 등록 (1인당)</small><s>400,000원</s><b>120,000<span>원</span><u>70%</u></b><p>동일 교회 2인 이상 등록 시</p></div>
-        <div class="tier"><small>일반 등록</small><b>400,000<span>원</span></b><p>11월 2일(월)까지 · 부가세 포함</p></div>
+        <div class="tier"><small>정규 참가비</small><b>400,000<span>원</span></b><p>11월 2일(월)까지 · 부가세 포함</p></div>
       </div>
       <p class="pn">※ 4회 전 과정 · 영수증 · 수료증 발급 가능</p>
     </div>
   </div>
+
+  <!-- 카드뉴스 -->
+  <section class="cards-sec" id="cards">
+    <div class="wrap">
+      <div class="tt"><h2>카드뉴스</h2><em>한눈에 보기</em></div>
+      <p class="desc">교회 단톡방이나 동역자분들께 함께 나눠 주세요. 카드를 누르면 원본 크기로 열립니다.</p>
+      <div class="cn">
+        <button class="cn-btn prev" type="button" aria-label="이전 카드">‹</button>
+        <div class="cn-track" id="cnTrack">
+          <a href="cards/card-01.jpg" target="_blank" rel="noopener"><img src="cards/card-01.jpg" width="1080" height="1080" loading="lazy" alt="1/8 2026년 제1기 목회자를 위한 AI 아카데미 — 반복되는 일은 AI에게, 목사님은 말씀과 기도에. 11월 3일(화) 개강 · 매주 화 오전 10시 · 사전 등록 14만 원"></a>
+          <a href="cards/card-02.jpg" target="_blank" rel="noopener"><img src="cards/card-02.jpg" width="1080" height="1080" loading="lazy" alt="2/8 목회는 그대로인데 시간은 자꾸 줄어듭니다 — 시간이 없어서가 아니라 꼭 해야 할 일들이 겹쳐 있을 뿐, 그중에는 나눠 할 수 있는 일도 있습니다"></a>
+          <a href="cards/card-03.jpg" target="_blank" rel="noopener"><img src="cards/card-03.jpg" width="1080" height="1080" loading="lazy" alt="3/8 AI가 목회를 대신하지 않습니다 — 설교와 심방은 목사님이, 그 앞뒤에 붙은 일들에 AI를 활용하는 방법을 알려드립니다. 교회에 기준이 필요한 때입니다"></a>
+          <a href="cards/card-04.jpg" target="_blank" rel="noopener"><img src="cards/card-04.jpg" width="1080" height="1080" loading="lazy" alt="AI 시대, 성도들의 삶에 교회는 어떻게 응답할까요? — AI와 연애하는 청소년, 연결되어 있지만 외로운 청년, 일자리의 변화를 겪는 성도. 기준은 성경 말씀에, 돌봄은 삶의 현장에"></a>
+          <a href="cards/card-05.jpg" target="_blank" rel="noopener"><img src="cards/card-05.jpg" width="1080" height="1080" loading="lazy" alt="4/8 4회 커리큘럼 — 듣고 끝나는 특강이 아닙니다. 1강 목회 행정을 절반으로 11/3, 2강 설교와 돌봄 11/10, 3강 교회 콘텐츠와 자동화 11/17, 4강 AI 시대의 기준 11/24"></a>
+          <a href="cards/card-06.jpg" target="_blank" rel="noopener"><img src="cards/card-06.jpg" width="1080" height="1080" loading="lazy" alt="5/8 수료 후 남는 것 — 실무 자산 12종, 수료증 발급, 1기 수료생 커뮤니티"></a>
+          <a href="cards/card-07.jpg" target="_blank" rel="noopener"><img src="cards/card-07.jpg" width="1080" height="1080" loading="lazy" alt="6/8 이런 분께 권합니다 — 하나라도 내 얘기다 싶으시다면"></a>
+          <a href="cards/card-08.jpg" target="_blank" rel="noopener"><img src="cards/card-08.jpg" width="1080" height="1080" loading="lazy" alt="7/8 강사 소개 — 고봉익 대표(TMD교육그룹 대표), 최주안 목사(교육학 박사 · 사단법인 티움 사무국장)"></a>
+          <a href="cards/card-09.jpg" target="_blank" rel="noopener"><img src="cards/card-09.jpg" width="1080" height="1080" loading="lazy" alt="8/8 참가 신청 — 11/3·11/10·11/17·11/24 매주 화 오전 10시 Zoom, 사전 등록 140,000원(10/27까지 입금), 동반 등록 120,000원, 정규 참가비 400,000원, 신청 마감 11월 2일, 문의 이혜정 연구원 010-9787-4906"></a>
+        </div>
+        <button class="cn-btn next" type="button" aria-label="다음 카드">›</button>
+      </div>
+      <div class="cn-foot">
+        <span class="cn-count" id="cnCount" aria-live="polite">1 / 9</span>
+        <div class="cta">
+          <a class="btn ln" href="목회자AI아카데미_카드뉴스.zip" download>카드뉴스 저장 (ZIP)</a>
+          <a class="btn dk" href="https://forms.gle/6NdC3SSy5LXptCHF9" target="_blank" rel="noopener">신청서 작성하기</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- 왜 지금인가 -->
   <section class="why" id="why">
@@ -497,6 +563,21 @@ footer{border-top:1px solid var(--line)}
         <div class="ben key"><i>09</i><h3>AI 시대의 기준을 세웁니다</h3><p>무엇을 AI에 맡기고 무엇을 맡기지 않을지 목회자 개인의 기준을 정하고, 우리 교회의 AI 윤리를 선언문으로 만듭니다. 기준은 성경 말씀입니다.</p></div>
         <div class="ben"><i>10</i><h3>다음세대와 가정을 지킵니다</h3><p>캐릭터형 AI와의 정서적 관계, 줄어드는 공동체 경험까지 — 청소년의 AI 문제를 목사님이 먼저 알고 가정과 교회에서 다룰 수 있게 합니다.</p></div>
       </div>
+    </div>
+  </section>
+
+  <!-- 이런 분께 -->
+  <section class="fit" id="fit">
+    <div class="wrap">
+      <div class="tt"><h2>이런 분께 권합니다</h2><em>하나라도 '내 얘기다' 싶으시다면</em></div>
+      <ul class="fitlist">
+        <li>주보 · 공지문 쓰는 데 매주 몇 시간씩 쓰고 계신다면</li>
+        <li>AI를 써보고 싶은데 어디서 시작할지 모르겠다면</li>
+        <li>교인이 AI로 쓴 글을 가져와 물어본 적이 있다면</li>
+        <li>설교 준비 시간이 자꾸 밀린다면</li>
+        <li>우리 교회 AI 기준을 세워야겠다 생각하신 적 있다면</li>
+      </ul>
+      <p class="fitend">이 과정은 목사님을 위해 만들었습니다</p>
     </div>
   </section>
 
@@ -544,6 +625,7 @@ footer{border-top:1px solid var(--line)}
           </dl></div>
         </details>
       </div>
+      <p class="hands">매 회차 실습 중심입니다. <b>보고 따라 하고, 만들면서 배웁니다.</b> AI를 한 번도 써보지 않으셨어도 괜찮습니다.</p>
       <p class="tbd">※ 각 회차의 세부 내용과 실습 구성은 강사진 논의에 따라 일부 조정될 수 있습니다.</p>
     </div>
   </section>
@@ -553,7 +635,7 @@ footer{border-top:1px solid var(--line)}
     <div class="wrap">
       <div class="tt"><h2>수료 후</h2><em>손에 들고 가시는 것</em></div>
       <div class="after">
-        <div><h3>실무 자산 12종</h3><p>행정 프롬프트 세트부터 목회 기준 선언문까지, 네 번의 회차에서 직접 만들어 갑니다.</p></div>
+        <div><h3>실무 자산 12종</h3><p>주보 문안 · 공지문 · 회의록 등 매주 쓰시는 문서를 우리 교회 말투로 뽑아내는 문장 세트부터 목회 기준 선언문까지, 직접 만들어 나오십니다.</p></div>
         <div><h3>수료증 발급</h3><p>4회 전 과정을 참석하신 분께 주식회사 한국인재연구소 명의로 수료증을 발급해 드립니다. (녹화본 수강 포함)</p></div>
         <div><h3>1기 수료생 커뮤니티</h3><p>과정이 끝난 뒤에도 사례와 자료를 나누며, 목회 현장의 AI 담론을 함께 만들어 갑니다.</p></div>
       </div>
@@ -585,7 +667,7 @@ footer{border-top:1px solid var(--line)}
           <img src="img/gobongik.jpg" alt="고봉익 대표" loading="lazy">
           <div>
             <h3>고봉익<small>대표</small></h3>
-            <div class="role">TMD교육그룹 대표 · 사단법인 티움 이사장</div>
+            <div class="role">TMD교육그룹 대표</div>
             <p>과기정통부·NIA 등 공공 AI·디지털윤리 교육 수행, 경기도민 13만 명 AI 교육 · 전국 80여 개 미래교육센터 운영, 현대자동차·넥슨 협력</p>
           </div>
         </div>
@@ -611,7 +693,7 @@ footer{border-top:1px solid var(--line)}
         <tr><th>신청 마감</th><td>11월 2일(월)</td></tr>
         <tr><th>방식</th><td>Zoom 온라인 실시간<small>접속 링크는 신청자에게 개별 안내드립니다</small></td></tr>
         <tr><th>대상</th><td>담임목사 · 부교역자 · 사모 · 신학생</td></tr>
-        <tr><th>참가비</th><td>정가 400,000원 (부가세 포함) <small>사전 등록 · 동반 등록 시 할인 · 선교사 · 개척교회 목회자는 별도 문의</small>사전 등록 사역 지원가 140,000원 <small>10월 26일까지 입금 시 (26만 원 할인)</small>동반 등록 120,000원 (1인당) <small>동일 교회 2인 이상 등록 시</small>일반 등록 400,000원 <small>11월 2일(월)까지 · 부가세 포함 · 4회 전 과정</small></td></tr>
+        <tr><th>참가비</th><td>정가 400,000원 (부가세 포함) <small>사전 등록 · 동반 등록 시 할인 · 선교사 · 개척교회 목회자는 별도 문의</small>사전 등록 사역 지원가 140,000원 <small>10월 27일까지 입금 시 (26만 원 지원)</small>동반 등록 120,000원 (1인당) <small>동일 교회 2인 이상 등록 시</small>정규 참가비 400,000원 <small>11월 2일(월)까지 · 부가세 포함 · 4회 전 과정</small></td></tr>
         <tr><th>준비물</th><td>개인 노트북 (필수)<small>실습 중심 과정이므로 반드시 지참해 주십시오</small></td></tr>
         <tr><th>녹화본</th><td>각 회차 종료 후 24시간 이내 제공<small>수강생 본인 학습용이며, 무단 공유·배포·재게시를 금합니다</small></td></tr>
         <tr><th>강사</th><td>고봉익 대표 · 최주안 목사 (Ed.D.)</td></tr>
@@ -628,7 +710,7 @@ footer{border-top:1px solid var(--line)}
       <div class="tt"><h2>신청 방법</h2><em>Apply</em></div>
       <div class="steps">
         <div class="step"><i>STEP 1</i><h3>신청서 작성</h3><p>아래 버튼을 눌러 신청서를 작성해 주십시오.</p></div>
-        <div class="step"><i>STEP 2</i><h3>참가비 입금</h3><p>등록 유형에 맞는 참가비를 안내된 계좌로 입금하시면 접수가 완료됩니다. 사전 등록 사역 지원가는 10월 26일까지 입금 시 적용됩니다. 입금자명은 신청하신 성함으로 부탁드립니다.</p></div>
+        <div class="step"><i>STEP 2</i><h3>참가비 입금</h3><p>등록 유형에 맞는 참가비를 안내된 계좌로 입금하시면 접수가 완료됩니다. 사전 등록 사역 지원가는 10월 27일까지 입금 시 적용됩니다. 입금자명은 신청하신 성함으로 부탁드립니다.</p></div>
         <div class="step"><i>STEP 3</i><h3>확정 안내</h3><p>입금이 확인되면 확정 문자를 보내 드리고, 개강 전날 Zoom 접속 링크와 준비물을 다시 안내드립니다.</p></div>
       </div>
       <div class="apply-box">
@@ -667,29 +749,12 @@ footer{border-top:1px solid var(--line)}
       <div class="tt"><h2>자주 묻는 질문</h2><em>FAQ</em></div>
       <div class="acc">
         <details><summary><span>선교사나 개척교회 목회자도 할인이 있나요?</span></summary><div class="a">네. 선교사님과 개척교회 목회자분들께는 사역 지원 차원의 할인이 있습니다. 참가비는 한국인재연구소 이혜정 연구원(010-9787-4906)께 문의해 주세요.</div></details>
-        <details><summary><span>같은 교회에서 함께 등록하면 할인이 있나요?</span></summary><div class="a">네. 동일 교회에서 2인 이상 등록하시면 1인당 120,000원의 동반 등록가가 적용됩니다. 10월 26일까지 입금하시면 사전 등록 사역 지원가 140,000원이 적용됩니다.</div></details>
+        <details><summary><span>같은 교회에서 함께 등록하면 할인이 있나요?</span></summary><div class="a">네. 동일 교회에서 2인 이상 등록하시면 1인당 120,000원의 동반 등록가가 적용됩니다. 10월 27일까지 입금하시면 사전 등록 사역 지원가 140,000원이 적용됩니다.</div></details>
         <details><summary><span>컴퓨터를 잘 다루지 못해도 괜찮을까요?</span></summary><div class="a">괜찮습니다. 오히려 그런 분들을 위해 설계한 과정입니다. 계정 설정부터 함께 시작하고, 모든 회차가 따라 하기 중심의 실습으로 진행됩니다.</div></details>
         <details><summary><span>노트북이 꼭 있어야 하나요?</span></summary><div class="a">네, 실습 중심 과정이라 개인 노트북이 필요합니다. 어려우신 경우 신청 시 미리 말씀해 주시면 상의해 드리겠습니다.</div></details>
         <details><summary><span>한 회차를 빠지면 어떻게 되나요?</span></summary><div class="a">각 회차 종료 후 24시간 이내에 녹화본을 제공하고, 결석하신 회차의 자료와 산출물도 따로 전달해 드립니다. 다만 실습 중심이라 가능한 한 전 회차 참석을 권해 드립니다.</div></details>
         <details><summary><span>AI가 설교를 대신 쓰게 되는 것은 아닌지요?</span></summary><div class="a">이 과정은 그 경계를 분명히 하는 데 상당한 시간을 씁니다. 2강에서 AI 대필의 경계와 영적 책임을 다루고, 4강 전체가 기준을 세우는 시간입니다. 기준은 성경 말씀입니다.</div></details>
         <details><summary><span>과정이 끝난 뒤에는요?</span></summary><div class="a">1기 수료생 커뮤니티로 이어집니다. 과정이 끝난 뒤에도 사례와 자료를 나누며 목회 현장의 AI 담론을 함께 만들어 갑니다. 4회 전 과정을 참석하신 분께는 수료증을 발급해 드립니다(녹화본 수강 포함).</div></details>
-      </div>
-    </div>
-  </section>
-
-  <!-- 포스터 -->
-  <section class="poster-sec" id="poster">
-    <div class="wrap">
-      <div class="tt"><h2>안내 포스터</h2><em>Poster</em></div>
-      <div class="pg">
-        <a href="img/poster.jpg" target="_blank" rel="noopener"><img src="img/poster-1000.jpg" alt="목회자를 위한 AI 아카데미 안내 포스터 — 11월 3일 개강, 매주 화요일 오전 10시 Zoom, 신청 마감 11월 2일, 정가 40만원 → 사전 등록 14만원·동반 12만원, 4회 커리큘럼, 강사 고봉익·최주안, 문의 이혜정 연구원 010-9787-4906" loading="lazy" width="1000" height="1415"></a>
-        <div class="pd">
-          <p>교회 단톡방이나 동역자분들께 포스터를 함께 나눠 주세요. <br>포스터를 누르면 원본 크기로 열립니다.</p>
-          <div class="cta">
-            <a class="btn ln" href="img/poster.jpg" download="목회자를_위한_AI_아카데미_포스터.jpg">포스터 저장하기</a>
-            <a class="btn dk" href="https://forms.gle/6NdC3SSy5LXptCHF9" target="_blank" rel="noopener">신청서 작성하기</a>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -739,6 +804,19 @@ footer{border-top:1px solid var(--line)}
   document.querySelectorAll('#mnav a').forEach(function(a){a.addEventListener('click',function(){hd.classList.remove('open');burger.setAttribute('aria-expanded',false)})});
   window.addEventListener('scroll', function(){ totop.classList.toggle('on', window.scrollY>600); }, {passive:true});
   totop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+  var tr=document.getElementById('cnTrack'), cnt=document.getElementById('cnCount'), pv=document.querySelector('.cn-btn.prev'), nx=document.querySelector('.cn-btn.next');
+  if(tr){
+    var items=tr.children, n=items.length;
+    var step=function(){ return items[0].getBoundingClientRect().width + (parseFloat(getComputedStyle(tr).columnGap)||16); };
+    var maxI=function(){ return Math.max(0,Math.round((tr.scrollWidth-tr.clientWidth)/step())); };
+    var upd=function(){ var end=tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-4; var i=Math.max(0,Math.min(n-1,Math.round(tr.scrollLeft/step()))); cnt.textContent=(end?n:i+1)+' / '+n; pv.disabled=tr.scrollLeft<4; nx.disabled=end; };
+    var target=0, go=function(d){ var cur=(Date.now()-last<600)?target:Math.round(tr.scrollLeft/step()); target=Math.max(0,Math.min(maxI(),cur+d)); last=Date.now(); tr.scrollTo({left:target*step(),behavior:'smooth'}); }, last=0;
+    pv.addEventListener('click',function(){ go(-1); });
+    nx.addEventListener('click',function(){ go(1); });
+    tr.addEventListener('scroll',upd,{passive:true});
+    window.addEventListener('resize',upd); upd();
+  }
 })();
 </script>
 </body>
