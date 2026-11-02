@@ -5,3 +5,4 @@ README.txt
 dist/
 배포.command
 .wrangler/
+apps-script/
