@@ -145,7 +145,7 @@ footer .wrap{padding-top:22px;padding-bottom:26px}
           <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="신청서에 적은 이메일">
         </div>
         <div class="hp" aria-hidden="true"><label>웹사이트<input name="website" tabindex="-1" autocomplete="off"></label></div>
-        <label class="agree"><input type="checkbox" id="agree" required> <span>입력한 이름과 이메일을 수강생 확인과 시청 기록에만 사용하는 데 동의합니다.</span></label>
+        <label class="agree"><input type="checkbox" id="agree" required> <span>입력한 이름과 이메일을 수강생 확인과 시청 기록(접속·재생 진도)에만 사용하는 데 동의합니다.</span></label>
         <button class="go" id="go" type="submit">강의 영상 보기</button>
         <div class="msg" id="msg" role="status" aria-live="polite"></div>
       </form>
@@ -186,6 +186,7 @@ footer .wrap{padding-top:22px;padding-bottom:26px}
   <div class="wrap">주최 · 운영 주식회사 한국인재연구소 &nbsp;|&nbsp; 협력 사단법인 티움 &nbsp;|&nbsp; 수강생 전용 페이지</div>
 </footer>
 
+<script src="https://player.vimeo.com/api/player.js"></script>
 <script>
 (function(){
   // 과제 제출방과 같은 Apps Script 웹앱(apps-script/submit-room.gs, action:'video')
@@ -213,12 +214,47 @@ footer .wrap{padding-top:22px;padding-bottom:26px}
     return fetch(ENDPOINT, {method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body:JSON.stringify(payload)}).then(function(r){ return r.json(); });
   }
 
+  // ── 시청 진도 보고: 재생 시작·25/50/75/100%·멈춤·5분마다·페이지를 떠날 때 ──
+  var me=null, cur=null, vp=null, st=null;
+  function fresh(no){ return {no:no, max:0, unsent:0, lastT:null, played:false, marks:{}}; }
+  function report(ev, beacon){
+    if (!me || !st || (!st.unsent && ev!=='play' && ev!=='progress')) return;
+    var body = JSON.stringify({action:'watch', name:me.name, email:me.email, video:st.no, ev:ev, pct:st.max, sec:Math.round(st.unsent)});
+    st.unsent = 0;
+    if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) { console.log('[watch]', body); return; }
+    try {
+      if (beacon && navigator.sendBeacon) navigator.sendBeacon(ENDPOINT, new Blob([body], {type:'text/plain;charset=utf-8'}));
+      else fetch(ENDPOINT, {method:'POST', keepalive:true, headers:{'Content-Type':'text/plain;charset=utf-8'}, body:body}).catch(function(){});
+    } catch(e){}
+  }
+  function track(iframe, no){
+    if (st) report('leave');
+    st = fresh(no); vp = null;
+    if (!window.Vimeo || !Vimeo.Player) return;
+    vp = new Vimeo.Player(iframe);
+    vp.on('play', function(){ st.lastT=null; if (!st.played){ st.played=true; report('play'); } });
+    vp.on('timeupdate', function(d){
+      if (st.lastT!==null){ var dt=d.seconds-st.lastT; if (dt>0 && dt<=2) st.unsent+=dt; }
+      st.lastT = d.seconds;
+      var pct = Math.floor((d.percent||0)*100);
+      if (pct > st.max) st.max = pct;
+      var m = Math.floor(pct/25)*25;
+      if (m>0 && !st.marks[m]) { st.marks[m]=1; report('progress'); }
+      else if (st.unsent >= 300) report('tick');
+    });
+    vp.on('pause', function(){ st.lastT=null; if (st.unsent >= 20) report('pause'); });
+    vp.on('ended', function(){ st.max=100; if (!st.marks[100]) { st.marks[100]=1; report('progress'); } });
+  }
+  document.addEventListener('visibilitychange', function(){ if (document.visibilityState==='hidden') report('leave', true); });
+  window.addEventListener('pagehide', function(){ report('leave', true); });
+
   function play(v){
     vtitle.textContent = v.title + ' 다시보기';
     player.innerHTML = '<iframe src="https://player.vimeo.com/video/' + encodeURIComponent(v.vimeo) +
       '?badge=0&amp;autopause=0&amp;dnt=1" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" ' +
       'referrerpolicy="strict-origin-when-cross-origin" title="목회자를 위한 AI 아카데미 1기 ' + v.title + '"></iframe>';
     [].forEach.call(list.querySelectorAll('button'), function(b){ b.classList.toggle('on', b.dataset.no == v.no); });
+    track(player.querySelector('iframe'), v.no);
   }
 
   function render(res){
@@ -245,6 +281,7 @@ footer .wrap{padding-top:22px;padding-bottom:26px}
     return call({action:'video', name:name, email:email, website:form.elements.website.value}).then(function(res){
       if (res && res.ok) {
         try { localStorage.setItem(KEY, JSON.stringify({name:name, email:email})); } catch(e){}
+        me = {name:name, email:email};
         msg.className='msg'; render(res);
       } else {
         show('err', TEXT[(res && res.code)] || TEXT.network);
@@ -263,6 +300,7 @@ footer .wrap{padding-top:22px;padding-bottom:26px}
 
   document.getElementById('again').addEventListener('click', function(){
     try { localStorage.removeItem(KEY); } catch(e){}
+    report('leave'); st=null; me=null;
     player.innerHTML=''; player.style.display='';
     done.classList.remove('on'); form.style.display=''; nameEl.value=''; emailEl.value=''; msg.className='msg'; nameEl.focus();
   });
