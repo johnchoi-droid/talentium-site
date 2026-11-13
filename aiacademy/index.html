@@ -67,6 +67,15 @@ ul,ol{list-style:none}
 .loc a:hover{color:var(--head)}
 .loc b{font-weight:500;color:var(--sub)}
 
+/* 제2기 모집 배너 */
+.recruit{display:block;margin-top:90px;background:var(--dark);color:#fff;font-size:15px}
+.recruit .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 16px;padding-top:13px;padding-bottom:13px;text-align:center}
+.recruit b{background:var(--yellow);color:var(--head);font-weight:700;font-size:13px;padding:2px 10px}
+.recruit span{color:#ddd}
+.recruit u{text-decoration:none;font-weight:700;color:var(--yellow)}
+.recruit:hover u{text-decoration:underline}
+.recruit + .loc{margin-top:0}
+
 /* hero */
 .hero{background:var(--yellow);overflow:hidden}
 .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center;padding-top:70px;padding-bottom:70px}
@@ -314,6 +323,7 @@ footer{border-top:1px solid var(--line)}
   .hd.open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
   html{scroll-padding-top:70px}
   .loc{margin-top:70px}
+  .recruit{margin-top:70px}
   .hero .wrap{grid-template-columns:1fr 280px;gap:36px;padding-top:50px;padding-bottom:54px}
   .hero h1{font-size:38px}
   .hero h2{font-size:21px}
@@ -344,6 +354,8 @@ footer{border-top:1px solid var(--line)}
   .wrap{padding:0 20px}
   section{padding:70px 0}
   .loc .wrap{padding-top:4px;padding-bottom:4px}
+  .recruit{font-size:13.5px}
+  .recruit .wrap{padding-top:11px;padding-bottom:11px;gap:4px 10px}
   .hero .wrap{grid-template-columns:1fr;gap:30px;padding-top:36px;padding-bottom:44px}
   .hero .org{font-size:13px}
   .hero .org span{margin:0 5px}
@@ -444,6 +456,8 @@ footer{border-top:1px solid var(--line)}
 <nav class="mnav" id="mnav" aria-label="모바일 메뉴">
   <a href="/">한국인재연구소 홈</a><a href="#cards">카드뉴스</a><a href="#curriculum">커리큘럼</a><a href="#info">참가 안내</a><a href="#apply">신청 방법</a><a href="#faq">자주 묻는 질문</a><a href="tel:01097874906" class="tel">문의 010-9787-4906</a>
 </nav>
+
+<a class="recruit" href="/aiacademy/2/"><div class="wrap"><b>제2기 모집 중</b><span>12월 8일(화) 개강 · 12월 1일까지 등록 시 사역 지원가 14만&nbsp;원</span><u>2기 안내 보기 ›</u></div></a>
 
 <div class="loc"><div class="wrap"><a href="/">홈</a> › <a href="/#programs">프로그램</a> › <b>목회자를 위한 AI 아카데미</b></div></div>
 
