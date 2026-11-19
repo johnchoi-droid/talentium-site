@@ -471,6 +471,10 @@ footer{background:#081A2C;color:#93AEC6;padding:64px 0 42px;font-size:.85rem}
 .acard .when{margin-top:12px;font-family:var(--mono);font-size:.78rem;color:var(--gold);letter-spacing:.04em}
 .apply .contact{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
 .fine{margin-top:18px;font-size:.8rem;color:#8FA9C2}
+.tbl .olt{display:inline-block;margin-left:8px;padding:2px 8px;border-radius:2px;background:var(--gold-soft);color:#8a5a14;font-size:.74rem;font-weight:700;letter-spacing:0}
+.applycards.two{grid-template-columns:repeat(2,1fr)}
+.askbar .btns2{display:flex;gap:8px;flex-wrap:wrap}
+@media(max-width:760px){.applycards.two{grid-template-columns:1fr}}
 .stripline .v small{font-size:.8rem;font-weight:500;color:#93AEC6}
 @media (max-width:900px){
   .applycards{grid-template-columns:1fr}
@@ -541,11 +545,12 @@ footer{background:#081A2C;color:#93AEC6;padding:64px 0 42px;font-size:.85rem}
     <nav class="nav" aria-label="주요 메뉴">
       <a href="#faculty">교수진</a>
       <a href="#program">프로그램</a>
-      <a href="#open">오픈 특강</a>
-      <a href="#research">연구 과정</a>
+      <a href="#research">연구 분야</a>
+      <a href="#process">선발</a>
       <a href="#cost">참가비·장학</a>
       <a href="#schedule">일정</a>
       <a href="#faq">FAQ</a>
+      <a href="#open">오픈 특강</a>
     </nav>
     <div class="act">
       <a class="tel" href="tel:+821055978744">010-5597-8744</a>
@@ -569,7 +574,7 @@ footer{background:#081A2C;color:#93AEC6;padding:64px 0 42px;font-size:.85rem}
         <a class="btn btn-o" href="https://docs.google.com/forms/d/e/1FAIpQLScV3kOiFbjebP5b3heLEnGbYPkNvjx8mxu9nGbn5hgqcbj1pA/viewform" target="_blank" rel="noopener">온라인 설명회 사전 신청 <span class="arrow">→</span></a>
         <a class="btn btn-ghost" href="#program">프로그램 한눈에 보기</a>
       </div>
-      <p class="hero-note">오픈 특강은 고등학생(예비 고1 포함) 누구나 · 수강료 <b>5만 원</b> · 연구 과정은 선발, 영어에 능통하지 않아도 참여 가능</p>
+      <p class="hero-note">한국에서 <b>4주 온라인 연구</b> + <b>미국 연구 방문</b> · 분야별 <b>5~6명</b> 소수 정예 선발 · 영어에 능통하지 않아도 참여 가능</p>
     </div>
 
     <aside class="card-form" id="quick">
@@ -591,10 +596,10 @@ footer{background:#081A2C;color:#93AEC6;padding:64px 0 42px;font-size:.85rem}
   </div>
 
   <div class="stripline">
-    <div><div class="k mono">온라인 설명회</div><div class="v">11/30 <span>(월)</span> 20:00</div><div class="d">사전 신청 · 프로그램·참가비 안내</div></div>
-    <div><div class="k mono">오픈 특강</div><div class="v">수강료 <span>5만 원</span></div><div class="d">12/14(월) 22:00 · 신청 12/11(금)까지</div></div>
-    <div><div class="k mono">연구 과정</div><div class="v">분야별 <span>5~6명</span></div><div class="d">온라인 연구 미팅 매주 월 22:00 · 12/14 — 1/11</div></div>
-    <div><div class="k mono">미국 연구 방문</div><div class="v">플로리다 <span>1/18 — 1/24</span></div><div class="d">성과 발표회 1월 말</div></div>
+    <div><div class="k mono">한국 · 온라인 연구</div><div class="v">교수와 <span>4주</span> 연구</div><div class="d">매주 월 22:00 화상 연구 미팅 · 12/14 — 1/11</div></div>
+    <div><div class="k mono">미국 · 연구 방문</div><div class="v">플로리다 <span>1/18 — 1/24</span></div><div class="d">교수진 연구 현장 방문 · 1월 말 성과 발표회</div></div>
+    <div><div class="k mono">모집 인원</div><div class="v">분야별 <span>5~6명</span></div><div class="d">4개 분야 · 서류 심사와 화상 면접으로 선발</div></div>
+    <div><div class="k mono">지원 마감</div><div class="v">조기 <span>11/29</span> · 정규 <span>12/11</span></div><div class="d">조기 전형 참가비 15% 할인</div></div>
   </div>
 </header>
 
@@ -622,37 +627,15 @@ footer{background:#081A2C;color:#93AEC6;padding:64px 0 42px;font-size:.85rem}
   <div class="wrap">
     <div class="head rv">
       <span class="eyebrow mono">PROGRAM</span>
-      <h2>오픈 특강에서 시작해 성과 발표회까지</h2>
-      <p class="sub">STAR 성장 4단계 — <strong>Explorer → Researcher → Fellow → Presenter</strong></p>
+      <h2>한국에서 4주 온라인 연구,<br class="dk"> 미국 연구 방문과 성과 발표까지</h2>
+      <p class="sub">STAR 성장 4단계 — <strong>Explorer → Researcher → Fellow → Presenter</strong>. 12월 중순부터 1월 말까지 약 7주 과정.</p>
     </div>
     <div class="outs rv">
-      <div><div class="num">01 · EXPLORER</div><h3>오픈 특강 + 리서치 미션</h3><p>오픈 특강 수강 후 리서치 미션 제출 → <strong>연구 역량 진단 리포트</strong></p></div>
-      <div><div class="num">02 · RESEARCHER</div><h3>분야별 미션 우수자</h3><p><strong>Researcher 인증서</strong>와 성과 발표회 발표 기회. 연구 과정에 남은 자리가 있으면 우선 참가</p></div>
-      <div><div class="num">03 · FELLOW</div><h3>연구 과정 수료</h3><p>교수 멘토와 분야별 소규모 연구, <strong>영문 연구 결과 보고서</strong>와 수료증</p></div>
-      <div><div class="num">04 · PRESENTER</div><h3>성과 발표회</h3><p>1월 말 <strong>성과 발표회</strong>에서 연구 내용 발표</p></div>
+      <div><div class="num">01 · EXPLORER</div><h3>온라인 연구 시작</h3><p><strong>12/14(월)</strong> 첫 화상 연구 미팅. 담당 교수의 연구 주제와 방법을 익히고 나의 연구 질문 정하기</p></div>
+      <div><div class="num">02 · RESEARCHER</div><h3>4주 온라인 연구</h3><p><strong>12/14 — 1/11</strong> 매주 월요일 22:00, 교수와 소그룹 연구 미팅. 미팅마다 진행 상황 발표와 피드백</p></div>
+      <div><div class="num">03 · FELLOW</div><h3>미국 연구 방문</h3><p><strong>1/18 — 1/24</strong> 플로리다. 온라인으로 지도받은 교수진을 연구 현장에서 직접 만나기</p></div>
+      <div><div class="num">04 · PRESENTER</div><h3>성과 발표회</h3><p><strong>1월 말</strong> 연구 내용 발표 · <strong>영문 연구 결과 보고서</strong>와 수료증</p></div>
     </div>
-  </div>
-</section>
-
-<section id="open">
-  <div class="wrap">
-    <div class="head rv">
-      <span class="eyebrow mono">OPEN LECTURE</span>
-      <h2>교수가 직접 여는 오픈 특강 · 수강료 5만 원</h2>
-      <p class="sub">연구 분야를 처음 만나는 단계. 오픈 특강 수강 후 리서치 미션 제출 시 <strong>연구 역량 진단 리포트</strong>(2027년 1월 중순) 제공. 고등학생(예비 고1 포함) 누구나, 선발 없이 신청.</p>
-    </div>
-    <div class="topics rv">
-      <div class="topic"><span class="mono">우주물리</span><h3>우주방사선 관측 데이터 분석</h3><p>12/14(월) 22:00~23:00 · 온라인</p></div>
-      <div class="topic"><span class="mono">재료공학</span><h3>금속 3D 프린팅 개론</h3><p>12/14(월) 22:00~23:00 · 온라인</p></div>
-      <div class="topic"><span class="mono">반도체</span><h3>첨단 반도체 패키징 기술의 필요성과 최신 트렌드</h3><p>12/14(월) 22:00~23:00 · 온라인</p></div>
-    </div>
-    <div class="gates rv" style="margin-top:44px">
-      <div class="gate"><div class="gno">특강</div><h3>12월 14일(월) 22:00~23:00</h3><ul><li>한국 시간 기준, <strong>온라인</strong> 진행</li><li>3개 분야 가운데 <strong>1개 분야 선택</strong> (분야 추가 시 별도 안내)</li><li>신청 <strong>12월 11일(금)까지</strong> · 수강료 <strong>5만 원</strong></li></ul></div>
-      <div class="gate"><div class="gno">미션</div><h3>리서치 미션</h3><ul><li>강의 후 안내, <strong>12월 18일(금) 24:00까지</strong> 제출</li><li>STAR Researcher · STAR 우수 장학 결과 <strong>12월 21일(월) 오전까지</strong> 개별 안내</li></ul></div>
-      <div class="gate"><div class="gno">연구 과정 지원자</div><h3>전형료 5만 원에 특강 포함</h3><ul><li>연구 과정 전형료는 오픈 특강 수강 포함</li><li>합격해 참가하면 잔금에서 차감</li><li>미개설 분야 지원자는 개설 분야 특강 수강 후 미션 수행</li></ul></div>
-    </div>
-    <p class="note rv">※ 기초생활수급·차상위·한부모 가정은 <strong>‘기회균등 참가/지원’</strong>으로 오픈 특강 수강료·전형료 없음.</p>
-    <div class="askbar rv"><span><b>오픈 특강 신청</b> · 12월 11일(금)까지 · 수강료 5만 원</span><a class="btn btn-o btn-sm" href="https://docs.google.com/forms/d/e/1FAIpQLSeHwA9fpl-YuQPyCOLN1bhala5iRHkgCHJNO8P29wlxzcTjeQ/viewform" target="_blank" rel="noopener">오픈 특강 신청하기 →</a></div>
   </div>
 </section>
 
@@ -660,7 +643,7 @@ footer{background:#081A2C;color:#93AEC6;padding:64px 0 42px;font-size:.85rem}
   <div class="wrap">
     <div class="head rv">
       <span class="eyebrow mono">RESEARCH TRACK</span>
-      <h2>분야별 5~6명, 교수와 매주 만나는 연구 과정</h2>
+      <h2>4개 분야, 분야별 5~6명 소수 정예</h2>
       <p class="sub">서류 심사와 화상 면접으로 선발. 분야별 <strong>5~6명(최대 7명)</strong>, 연구 결과는 <strong>영문 보고서</strong>로 정리. 영어에 능통하지 않아도 참여 가능.</p>
     </div>
     <div class="tblwrap rv">
@@ -668,14 +651,14 @@ footer{background:#081A2C;color:#93AEC6;padding:64px 0 42px;font-size:.85rem}
         <caption>분야별 온라인 연구 미팅 · 12/14 — 1/11 · 매주 월요일 22:00 (한국 시간)</caption>
         <thead><tr><th>연구 분야</th><th>온라인 연구 미팅</th></tr></thead>
         <tbody>
-          <tr><th scope="row">우주물리</th><td class="num">5회</td></tr>
-          <tr><th scope="row">재료공학</th><td class="num">5회</td></tr>
-          <tr><th scope="row">반도체</th><td class="num">4회</td></tr>
+          <tr><th scope="row">우주물리</th><td class="num">5회 <span class="olt">+ 오픈 특강 1회</span><span class="small">12/14 교수 직강 「우주방사선 관측 데이터 분석」</span></td></tr>
+          <tr><th scope="row">재료공학</th><td class="num">5회 <span class="olt">+ 오픈 특강 1회</span><span class="small">12/14 교수 직강 「금속 3D 프린팅 개론」</span></td></tr>
+          <tr><th scope="row">반도체</th><td class="num">4회 <span class="olt">+ 오픈 특강 1회</span><span class="small">12/14 교수 직강 「첨단 반도체 패키징 기술의 필요성과 최신 트렌드」</span></td></tr>
           <tr><th scope="row">의공학·AI</th><td class="num">4회</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="note rv">※ 반도체, 의공학·AI는 12. 28.에 진행하지 않습니다. 분야별 개설 여부는 모집 현황에 따라 확정, 모집 정원에 못 미치는 분야는 12. 11.(금)까지 개별 안내.</p>
+    <p class="note rv">※ 반도체, 의공학·AI는 12. 28.에 진행하지 않습니다. 오픈 특강은 연구 과정 참가자도 함께 듣습니다(전형료에 포함). 분야별 개설 여부는 모집 현황에 따라 확정, 모집 정원에 못 미치는 분야는 12. 11.(금)까지 개별 안내.</p>
     <div class="photoband rv">
       <img src="img/semi.jpg" alt="반도체 연구실에서 연구자와 학생들이 웨이퍼와 분석 화면을 함께 살펴보는 모습" loading="lazy">
       <small>이해를 돕기 위한 이미지</small>
@@ -688,12 +671,27 @@ footer{background:#081A2C;color:#93AEC6;padding:64px 0 42px;font-size:.85rem}
   </div>
 </section>
 
+<section id="process" class="band-fog">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow mono">SELECTION</span>
+      <h2>연구 과정 선발 — 서류, 화상 면접, 계약</h2>
+    </div>
+    <div class="gates rv">
+      <div class="gate"><div class="gno">STEP 1</div><h3>서류 심사</h3><ul><li>접수 순서대로 심사</li><li><strong>성적표 필수</strong>, 교사 추천서 선택(가점)</li></ul></div>
+      <div class="gate"><div class="gno">STEP 2</div><h3>화상 면접</h3><ul><li>서류 합격자 대상, 약 15분</li><li>한국어·영어 중 선택</li></ul></div>
+      <div class="gate"><div class="gno">STEP 3</div><h3>합격 · 계약</h3><ul><li>합격 안내 후 <strong>3일 안에 계약금 30%</strong></li><li>잔금 12월 23일(수)까지</li></ul></div>
+    </div>
+    <div class="askbar rv"><span><b>연구 과정 지원</b> · 조기 전형 11/29(일) · 정규 전형 12/11(금) 마감</span><a class="btn btn-o btn-sm" href="https://docs.google.com/forms/d/e/1FAIpQLSevX4rfo9RhBuHPQ4LVEq-yvVXEZ8JBUoNDA3W6zCnCqnDrbA/viewform" target="_blank" rel="noopener">연구 과정 지원하기 →</a></div>
+  </div>
+</section>
+
 <section id="cost">
   <div class="wrap">
     <div class="head rv">
       <span class="eyebrow mono">COST &amp; SCHOLARSHIP</span>
       <h2>참가비와 장학</h2>
-      <p class="sub">연구 과정 참가비는 연구 프로그램비, 현지 체류비, 항공료(정액)로 구성되며, 금액과 납부 일정은 온라인 설명회 또는 개별 상담에서 안내해 드립니다. 오픈 특강 수강료와 연구 과정 전형료는 <strong>5만 원</strong>입니다.</p>
+      <p class="sub">연구 과정 참가비는 연구 프로그램비, 현지 체류비, 항공료(정액)로 구성되며, 금액과 납부 일정은 온라인 설명회 또는 개별 상담에서 안내해 드립니다. 연구 과정 전형료는 <strong>5만 원</strong>(오픈 특강 수강 포함, 합격해 참가하면 잔금에서 차감)입니다.</p>
     </div>
     <div class="paybox rv">
       <div>
@@ -715,7 +713,7 @@ footer{background:#081A2C;color:#93AEC6;padding:64px 0 42px;font-size:.85rem}
     <div class="askbar rv"><span><b>연구 과정 참가비</b>는 온라인 설명회 또는 개별 상담에서 안내</span><a class="btn btn-o btn-sm" href="mailto:junho@talentium.co.kr?subject=STAR%20%EB%A9%98%ED%86%A0%EC%8B%AD%20%EC%B0%B8%EA%B0%80%EB%B9%84%20%EC%95%88%EB%82%B4%20%EC%9A%94%EC%B2%AD&amp;body=%EC%84%B1%ED%95%A8%28%ED%95%99%EC%83%9D%29%3A%0A%ED%95%99%EB%85%84%C2%B7%ED%95%99%EA%B5%90%3A%0A%ED%9D%AC%EB%A7%9D%20%EB%B6%84%EC%95%BC%3A%0A%EC%97%B0%EB%9D%BD%EC%B2%98%3A">참가비 안내 요청 →</a></div>
     <div class="provisional rv">
       <div><b>장학</b>유료 참가 학생의 <strong>10%</strong>(소수점 올림)에게 장학이 주어지며, 정규 전형 마감 후 확정됩니다. <strong>STAR 우수 장학</strong>은 리서치 미션 최우수자 1명에게 주어지고 연구 과정 참가자도 대상입니다. 연구 과정에 지원하여 합격한 학생이 선정되면 이미 낸 계약금 및 전형료 전액을 환불하고, 연구 과정 참가자가 아닌 학생이 선정되면 참가비 부담 없이 연구 과정에 참여합니다.</div>
-      <div><b>기회 장학 · 기회균등 참가</b>기회 장학은 소득 기준 없이 건강보험·재산세 서류 심사로 선정하며 결과는 12월 14일에 안내합니다. 기초생활수급·차상위·한부모 가정은 ‘기회균등 참가/지원’으로 수강료·전형료가 없습니다.</div>
+      <div><b>기회 장학 · 기회균등 참가</b>기회 장학은 소득 기준 없이 건강보험·재산세 서류 심사로 선정하며 결과는 12월 14일에 안내합니다. 기초생활수급·차상위·한부모 가정은 ‘기회균등 지원’으로 전형료가 없습니다.</div>
     </div>
   </div>
 </section>
@@ -724,39 +722,68 @@ footer{background:#081A2C;color:#93AEC6;padding:64px 0 42px;font-size:.85rem}
   <div class="wrap">
     <div class="head rv">
       <span class="eyebrow mono">SCHEDULE</span>
-      <h2>모집부터 성과 발표회까지</h2>
-      <p class="sub">일정 등 세부 내용은 사정에 따라 변경 가능. 변경 시 이 페이지와 신청자에게 안내.</p>
+      <h2>조기 전형 11월 29일 · 정규 전형 12월 11일 마감</h2>
+      <p class="sub">조기 전형으로 지원하면 참가비 <strong>15% 할인</strong>. 일정 등 세부 내용은 사정에 따라 변경 가능, 변경 시 이 페이지와 신청자에게 안내.</p>
     </div>
     <div class="timeline rv">
       <div class="tl"><div class="when">11/29 (일)<span>조기 전형 마감</span></div><div class="what"><h3>조기 전형 마감 <span class="tag">할인 15%</span></h3><p>결과 안내 12월 3일까지</p></div><div class="no">01</div></div>
       <div class="tl"><div class="when">11/30 (월) 20:00<span>온라인</span></div><div class="what"><h3>온라인 설명회 <span class="tag">사전 신청</span></h3><p>STAR 멘토십 1기 프로그램과 참가비 안내. 실시간 참석 후 정규 전형 합격 시 참가비 10% 할인.</p></div><div class="no">02</div></div>
-      <div class="tl"><div class="when">12/11 (금)<span>마감</span></div><div class="what"><h3>정규 전형 · 오픈 특강 신청 마감</h3><p>접수 순서대로 서류 심사</p></div><div class="no">03</div></div>
+      <div class="tl"><div class="when">12/11 (금)<span>마감</span></div><div class="what"><h3>정규 전형 마감</h3><p>접수 순서대로 서류 심사 · 모집 정원에 못 미치는 분야의 개설 여부도 이날까지 안내</p></div><div class="no">03</div></div>
       <div class="tl"><div class="when">12/12 (토)<span>오리엔테이션</span></div><div class="what"><h3>합격자 오리엔테이션</h3></div><div class="no">04</div></div>
-      <div class="tl"><div class="when">12/14 (월) 22:00<span>시작</span></div><div class="what"><h3>오픈 특강 · 첫 온라인 연구 미팅</h3><p>기회 장학 결과 안내</p></div><div class="no">05</div></div>
-      <div class="tl"><div class="when">12/18 (금) 24:00<span>미션 마감</span></div><div class="what"><h3>리서치 미션 제출 마감</h3><p>12/21 (월) 오전까지 STAR Researcher와 우수 장학 결과 안내</p></div><div class="no">06</div></div>
-      <div class="tl"><div class="when">12/23 (수)<span>납부</span></div><div class="what"><h3>잔금 납부 · ESTA 기한</h3></div><div class="no">07</div></div>
+      <div class="tl"><div class="when">12/14 (월) 22:00<span>시작</span></div><div class="what"><h3>온라인 연구 시작</h3><p>첫 화상 연구 미팅 · 기회 장학 결과 안내</p></div><div class="no">05</div></div>
+      <div class="tl"><div class="when">12/23 (수)<span>납부</span></div><div class="what"><h3>잔금 납부 · ESTA 기한</h3></div><div class="no">06</div></div>
+      <div class="tl"><div class="when">1/11 (월)<span>온라인 연구</span></div><div class="what"><h3>마지막 온라인 연구 미팅</h3></div><div class="no">07</div></div>
       <div class="tl"><div class="when">1/18 (월) — 1/24 (일)<span>미국 현지</span></div><div class="what"><h3>플로리다 연구 방문</h3></div><div class="no">08</div></div>
       <div class="tl"><div class="when">1월 말<span>발표</span></div><div class="what"><h3>성과 발표회</h3></div><div class="no">09</div></div>
-    </div>
-  </div>
-</section>
-
-<section id="process">
-  <div class="wrap">
-    <div class="head rv">
-      <span class="eyebrow mono">SELECTION</span>
-      <h2>연구 과정 선발 — 서류, 화상 면접, 계약</h2>
-    </div>
-    <div class="gates rv">
-      <div class="gate"><div class="gno">STEP 1</div><h3>서류 심사</h3><ul><li>접수 순서대로 심사</li><li><strong>성적표 필수</strong>, 교사 추천서 선택(가점)</li></ul></div>
-      <div class="gate"><div class="gno">STEP 2</div><h3>화상 면접</h3><ul><li>서류 합격자 대상, 약 15분</li><li>한국어·영어 중 선택</li></ul></div>
-      <div class="gate"><div class="gno">STEP 3</div><h3>합격 · 계약</h3><ul><li>합격 안내 후 <strong>3일 안에 계약금 30%</strong></li><li>잔금 12월 23일(수)까지</li></ul></div>
     </div>
     <div class="askbar rv"><span><b>연구 과정 지원</b> · 조기 전형 11/29(일) · 정규 전형 12/11(금) 마감</span><a class="btn btn-o btn-sm" href="https://docs.google.com/forms/d/e/1FAIpQLSevX4rfo9RhBuHPQ4LVEq-yvVXEZ8JBUoNDA3W6zCnCqnDrbA/viewform" target="_blank" rel="noopener">연구 과정 지원하기 →</a></div>
   </div>
 </section>
 
-<section id="faq" class="band-fog">
+<section id="apply" class="apply">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow mono">APPLY</span>
+      <h2>신청과 문의</h2>
+      <p class="sub">지원 방법은 이 페이지에서 확인하실 수 있고, 참가비는 온라인 설명회 또는 개별 상담에서 안내해 드립니다. 궁금한 점은 STAR 멘토십 총괄 장준호 위원에게 문의해 주세요.</p>
+    </div>
+    <div class="applycards two rv">
+      <div class="acard"><span class="mono">온라인 설명회</span><h3>사전 신청</h3><p>STAR 멘토십 1기 프로그램과 참가비 안내. 실시간으로 참석한 뒤 정규 전형에 지원해 합격하면 참가비 10% 할인.</p><div class="when">11/30 (월) 20:00</div><a class="btn btn-o btn-block" href="https://docs.google.com/forms/d/e/1FAIpQLScV3kOiFbjebP5b3heLEnGbYPkNvjx8mxu9nGbn5hgqcbj1pA/viewform" target="_blank" rel="noopener">사전 신청하기</a></div>
+      <div class="acard"><span class="mono">연구 과정</span><h3>온라인 지원</h3><p>서류 심사와 화상 면접으로 선발. 성적표 필수, 교사 추천서 선택(가점).</p><div class="when">조기 11/29 · 정규 12/11 마감</div><a class="btn btn-ghost btn-block" href="https://docs.google.com/forms/d/e/1FAIpQLSevX4rfo9RhBuHPQ4LVEq-yvVXEZ8JBUoNDA3W6zCnCqnDrbA/viewform" target="_blank" rel="noopener">연구 과정 지원하기</a></div>
+    </div>
+    <div class="contact rv">
+      <div>
+        <span class="mono">CONTACT</span>
+        <h3>STAR 멘토십 총괄 · 장준호 위원</h3>
+        <dl>
+          <dt>이메일</dt><dd><a href="mailto:junho@talentium.co.kr">junho@talentium.co.kr</a></dd>
+          <dt>전화</dt><dd><a href="tel:+821055978744">010-5597-8744</a></dd>
+          <dt>참가비</dt><dd><a href="mailto:junho@talentium.co.kr?subject=STAR%20%EB%A9%98%ED%86%A0%EC%8B%AD%20%EC%B0%B8%EA%B0%80%EB%B9%84%20%EC%95%88%EB%82%B4%20%EC%9A%94%EC%B2%AD&amp;body=%EC%84%B1%ED%95%A8%28%ED%95%99%EC%83%9D%29%3A%0A%ED%95%99%EB%85%84%C2%B7%ED%95%99%EA%B5%90%3A%0A%ED%9D%AC%EB%A7%9D%20%EB%B6%84%EC%95%BC%3A%0A%EC%97%B0%EB%9D%BD%EC%B2%98%3A">참가비 안내 요청</a></dd>
+        </dl>
+      </div>
+      <div class="box"><b>주최·주관 및 협력</b>STAR 멘토십은 (주)한국인재연구소가 주최·주관하고, 비영리 사단법인 티움이 공익교육 협력 기관으로 참여합니다.</div>
+    </div>
+  </div>
+</section>
+
+<section id="open" class="band-fog">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow mono">OPEN LECTURE · 사단법인 티움 주관</span>
+      <h2>연구 과정에 함께하지 못하는 학생도,<br class="dk"> 누구나 들을 수 있는 오픈 특강</h2>
+      <p class="sub">고등학생(예비 고1 포함) 누구나, 선발 없이. 교수진이 자신의 실제 연구 주제를 직접 강의하는 1시간 온라인 특강. <strong>12월 14일(월) 22:00</strong> · 수강료 <strong>5만 원</strong> · 기초생활수급·차상위·한부모 가정은 수강료 없음.</p>
+    </div>
+    <div class="topics rv">
+      <div class="topic"><span class="mono">우주물리</span><h3>우주방사선 관측 데이터 분석</h3><p>12/14(월) 22:00~23:00 · 온라인</p></div>
+      <div class="topic"><span class="mono">재료공학</span><h3>금속 3D 프린팅 개론</h3><p>12/14(월) 22:00~23:00 · 온라인</p></div>
+      <div class="topic"><span class="mono">반도체</span><h3>첨단 반도체 패키징 기술의 필요성과 최신 트렌드</h3><p>12/14(월) 22:00~23:00 · 온라인</p></div>
+    </div>
+    <p class="note rv">강의 후 리서치 미션(12/18 24:00까지)을 제출하면 <strong>연구 역량 진단 리포트</strong>(2027년 1월 중순) 제공. 분야별 미션 우수자에게는 인증서와 성과 발표회 발표 기회.</p>
+    <div class="askbar rv"><span><b>오픈 특강 신청</b> · 12월 11일(금)까지 · 자세한 안내는 사단법인 티움 페이지에서</span><span class="btns2"><a class="btn btn-ghost btn-sm" href="https://tieum.org/star/" target="_blank" rel="noopener">자세히 보기 (티움)</a><a class="btn btn-o btn-sm" href="https://docs.google.com/forms/d/e/1FAIpQLSeHwA9fpl-YuQPyCOLN1bhala5iRHkgCHJNO8P29wlxzcTjeQ/viewform" target="_blank" rel="noopener">오픈 특강 신청하기 →</a></span></div>
+  </div>
+</section>
+
+<section id="faq">
   <div class="wrap">
     <div class="head rv">
       <span class="eyebrow mono">FAQ</span>
@@ -776,44 +803,17 @@ footer{background:#081A2C;color:#93AEC6;padding:64px 0 42px;font-size:.85rem}
   </div>
 </section>
 
-<section id="apply" class="apply">
-  <div class="wrap">
-    <div class="head rv">
-      <span class="eyebrow mono">APPLY</span>
-      <h2>신청과 문의</h2>
-      <p class="sub">지원 방법은 이 페이지에서 확인하실 수 있고, 참가비는 온라인 설명회 또는 개별 상담에서 안내해 드립니다. 궁금한 점은 STAR 멘토십 총괄 장준호 위원에게 문의해 주세요.</p>
-    </div>
-    <div class="applycards rv">
-      <div class="acard"><span class="mono">온라인 설명회</span><h3>사전 신청</h3><p>STAR 멘토십 1기 프로그램과 참가비 안내. 실시간으로 참석한 뒤 정규 전형에 지원해 합격하면 참가비 10% 할인.</p><div class="when">11/30 (월) 20:00</div><a class="btn btn-o btn-block" href="https://docs.google.com/forms/d/e/1FAIpQLScV3kOiFbjebP5b3heLEnGbYPkNvjx8mxu9nGbn5hgqcbj1pA/viewform" target="_blank" rel="noopener">사전 신청하기</a></div>
-      <div class="acard"><span class="mono">오픈 특강</span><h3>수강 신청 · 5만 원</h3><p>12월 14일(월) 22:00, 교수 직강 온라인 특강. 우주물리 · 재료공학 · 반도체 가운데 1개 분야 선택.</p><div class="when">신청 12/11 (금)까지</div><a class="btn btn-ghost btn-block" href="https://docs.google.com/forms/d/e/1FAIpQLSeHwA9fpl-YuQPyCOLN1bhala5iRHkgCHJNO8P29wlxzcTjeQ/viewform" target="_blank" rel="noopener">오픈 특강 신청하기</a></div>
-      <div class="acard"><span class="mono">연구 과정</span><h3>온라인 지원</h3><p>서류 심사와 화상 면접으로 선발. 성적표 필수, 교사 추천서 선택(가점).</p><div class="when">조기 11/29 · 정규 12/11 마감</div><a class="btn btn-ghost btn-block" href="https://docs.google.com/forms/d/e/1FAIpQLSevX4rfo9RhBuHPQ4LVEq-yvVXEZ8JBUoNDA3W6zCnCqnDrbA/viewform" target="_blank" rel="noopener">연구 과정 지원하기</a></div>
-    </div>
-    <div class="contact rv">
-      <div>
-        <span class="mono">CONTACT</span>
-        <h3>STAR 멘토십 총괄 · 장준호 위원</h3>
-        <dl>
-          <dt>이메일</dt><dd><a href="mailto:junho@talentium.co.kr">junho@talentium.co.kr</a></dd>
-          <dt>전화</dt><dd><a href="tel:+821055978744">010-5597-8744</a></dd>
-          <dt>참가비</dt><dd><a href="mailto:junho@talentium.co.kr?subject=STAR%20%EB%A9%98%ED%86%A0%EC%8B%AD%20%EC%B0%B8%EA%B0%80%EB%B9%84%20%EC%95%88%EB%82%B4%20%EC%9A%94%EC%B2%AD&amp;body=%EC%84%B1%ED%95%A8%28%ED%95%99%EC%83%9D%29%3A%0A%ED%95%99%EB%85%84%C2%B7%ED%95%99%EA%B5%90%3A%0A%ED%9D%AC%EB%A7%9D%20%EB%B6%84%EC%95%BC%3A%0A%EC%97%B0%EB%9D%BD%EC%B2%98%3A">참가비 안내 요청</a></dd>
-        </dl>
-      </div>
-      <div class="box"><b>주최·주관 및 협력</b>STAR 멘토십은 (주)한국인재연구소가 주최·주관하고, 비영리 사단법인 티움이 공익교육 협력 기관으로 참여합니다.</div>
-    </div>
-  </div>
-</section>
-
 <section class="finalcta">
   <div class="bg"><img src="img/meet.jpg" alt="" loading="lazy"></div>
   <div class="wrap">
     <span class="eyebrow mono">STAR MENTORSHIP · 1기</span>
     <h2>재미 한인 과학자의 연구실,<br>한국 고등학생에게 열리는 겨울</h2>
-    <p>온라인 설명회 11월 30일(월) 오후 8시 · 오픈 특강 12월 14일(월) 오후 10시</p>
+    <p>조기 전형 11월 29일(일) · 온라인 설명회 11월 30일(월) 오후 8시 · 정규 전형 12월 11일(금) 마감</p>
     <div class="btns">
       <a class="btn btn-o" href="https://docs.google.com/forms/d/e/1FAIpQLScV3kOiFbjebP5b3heLEnGbYPkNvjx8mxu9nGbn5hgqcbj1pA/viewform" target="_blank" rel="noopener">설명회 사전 신청 <span class="arrow">→</span></a>
-      <a class="btn btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSeHwA9fpl-YuQPyCOLN1bhala5iRHkgCHJNO8P29wlxzcTjeQ/viewform" target="_blank" rel="noopener">오픈 특강 신청</a>
+      <a class="btn btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSevX4rfo9RhBuHPQ4LVEq-yvVXEZ8JBUoNDA3W6zCnCqnDrbA/viewform" target="_blank" rel="noopener">연구 과정 지원하기</a>
     </div>
-    <p class="fine">오픈 특강은 고등학생(예비 고1 포함) 누구나 · 일정 등 세부 내용은 사정에 따라 변경 가능</p>
+    <p class="fine">분야별 5~6명 선발 · 일정 등 세부 내용은 사정에 따라 변경 가능</p>
   </div>
 </section>
 </main>
